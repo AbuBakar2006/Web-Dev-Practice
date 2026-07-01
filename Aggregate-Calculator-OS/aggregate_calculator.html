@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aggregate Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Aggregate Calculator</h1>
+
+        <form onsubmit="calaggr(); return false;">
+            <h5>
+                <label>Name</label>
+                <input type="text" id="name"><br><br>
+
+                <label>Inter Marks</label>
+                <input type="number" id="im"><br><br>
+
+                <label>Metric Marks</label>
+                <input type="number" id="mm"><br><br>
+
+                <label>Entry Test Marks</label>
+                <input type="number" id="tm"><br><br>
+            </h5>
+
+            <input type="submit" value="Calculate">
+
+            <h2 id="re"></h2>
+        </form>
+    </div>
+
+    <script>
+function calaggr() {
+    let name=document.getElementById("name").value;
+
+    let imarks=parseFloat(document.getElementById("im").value);
+    let mmarks=parseFloat(document.getElementById("mm").value);
+    let tmarks=parseFloat(document.getElementById("tm").value);
+
+    //convert to percentages
+    let iper=(imarks/1100)*100;
+    let mper=(mmarks/1100)*100;
+
+    //aggregate calculation
+    let agr=(iper * 0.3)+(mper * 0.2)+(tmarks * 0.5);
+
+    let field;
+    if(agr>=80){
+        field="Medical";
+    } else if(agr>=70){
+        field="Computer Science";
+    } else if(agr>=60){
+        field="Social Science";
+    } else{
+        field="Literature";
+    }
+
+    document.getElementById("re").innerHTML=
+        name + ", your aggregate=" + agr.toFixed(2) + "%" +
+        "<br>Suggested field: " + field;
+}
+</script>
+</body>
+
+</html>

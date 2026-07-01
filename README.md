@@ -4,10 +4,10 @@ A collection of practice layouts, web designs, and interactive calculators built
 
 ## Projects
 
-- **`Aggregate-Calculator-OS/`**
+- **`Lab-1/`**
   - An interactive GPA and marks aggregate calculator designed with clean CSS styles. Useful for students to calculate aggregate scores based on grading criteria.
 
-- **`Lab-2-OS/`**
+- **`Lab-2/`**
   - A responsive homepage layout utilizing semantic HTML elements and custom CSS stylesheets.
 
 - **`Lab-3/`**
